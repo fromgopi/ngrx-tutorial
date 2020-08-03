@@ -1,5 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <h2 style="text-align: center;">Hello welcome to the world of Angular and NGRX</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10">
+      <h2 class="text-center">Online Store</h2>
+      <h6 class="text-center"><a [routerLink]="['/cart']">Cart: {{(cart | async).length}}</a></h6>
+    </div>
+  </div>
 </div>
 <router-outlet></router-outlet>
