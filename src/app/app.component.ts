@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngrx-tutorial';
+
+  constructor(private store: Store<any>) {}
+
+  cart: Observable<Array<any>>;
+
+  ngOnInit(){
+    this.cart = this.store.select('store');
+  }
+
 }
