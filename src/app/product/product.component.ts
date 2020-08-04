@@ -11,7 +11,6 @@ import * as Cart from '../actions/product/product.actions';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
   product: Product;
 
   constructor(private route: ActivatedRoute, private store: Store<any>) { }
